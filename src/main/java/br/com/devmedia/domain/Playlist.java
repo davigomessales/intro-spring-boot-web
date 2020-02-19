@@ -21,7 +21,7 @@ public class Playlist {
 
     @NotBlank
     @Column(nullable = false)
-    private String Descrição;
+    private String descricao;
 
     @OneToMany(mappedBy = "playlist", cascade = CascadeType.ALL)
     private List<Musica> musicas;
@@ -42,12 +42,12 @@ public class Playlist {
         this.nome = nome;
     }
 
-    public String getDescrição() {
-        return Descrição;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDescrição(String descrição) {
-        Descrição = descrição;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public List<Musica> getMusicas() {

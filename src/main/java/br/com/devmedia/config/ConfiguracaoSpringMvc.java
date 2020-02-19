@@ -11,14 +11,16 @@ import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
 public class ConfiguracaoSpringMvc extends WebMvcConfigurerAdapter {
 
     @Bean
-    public SpringTemplateEngine templateEngine(SpringResourceTemplateResolver resolver){
+    public SpringTemplateEngine templateEngine(SpringResourceTemplateResolver resolver) {
         SpringTemplateEngine templateEngine = new SpringTemplateEngine();
         templateEngine.setTemplateResolver(resolver);
         return templateEngine;
     }
 
-    public void addViewControllers(ViewControllerRegistry registry){
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("home");
         registry.addViewController("/home").setViewName("home");
     }
+
 }
