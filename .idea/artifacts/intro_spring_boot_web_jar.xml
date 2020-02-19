@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="intro-spring-boot-web:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/intro_spring_boot_web_jar</output-path>
+    <root id="archive" name="intro-spring-boot-web.jar">
+      <element id="module-output" name="intro-spring-boot-web" />
+    </root>
+  </artifact>
+</component>
